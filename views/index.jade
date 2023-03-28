@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} 
+  a.btn.btn-primary(href='/new') Post a message!
+  hr
+
+  each message in messages 
+    p #{message.text} 
+    p From: #{message.user} 
+    p Sent on: #{message.added}
+    hr
